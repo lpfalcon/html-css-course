@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Acepta Caracteres especiales (Acentos, simbolos etc )-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta estiqueta es utilizada para el deseño Responsivo-->
+    <title>Mi primera pagina</title> <!--Titulo de la Pagina-->
+
+    <!-- Etiqueta de estilos CSS-->
+    <style>
+        /* Esta es la estructura de un comentario en css 
+          (barrita-asterisco-asterisco-barrita "/ *   * /") 
+        */
+        * {
+            /* (*) Indica que toda mi pagina tendra este estilo */
+            margin: 0;
+        }
+
+        /* Estilos para la etiqueta "ul" o lista  */
+        .list-style {
+            list-style: none;
+            /* elimina los puntitos*/
+        }
+
+        /* Estilos para el enlace o etiqueta "a"  */
+
+        .link-style {
+            color: rgb(42, 173, 183);
+            text-decoration: none;
+        }
+
+        /*
+        Recordar las clases se utilizan para agregar estilos generales
+        varios elementos pueden tener los mismos estilos
+        
+        */
+        .font-color {
+            color: rgb(68, 9, 122);
+        }
+
+        /* 
+        Recordar los ids son identificadores unicos
+        solo un elemento especifico puede tener estilos especificos
+        */
+        #font-color2 {
+            color: pink;
+        }
+
+        #div-style {
+            background-color: rgb(210, 111, 208);
+            border: 10px solid rgb(158, 156, 156);
+            margin: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header> <!--Etiqueta para header -->
+        <nav style="color: blue;"> <!--Etiqueta para la navegacion -->
+            <span> Este color sera azul por la etiqueta style en el nav</span>
+            <ul class="list-style"> <!--Lista Desordenada-->
+                <li class="list-item">
+                    <a href="#" target="_blank" class="link-style">Nosotros </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">Acerca de </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">Contactanos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="div-style">
+            <h1 class="font-color">Modelo de Cajas</h1>
+        </div>
+        <h1 id="font-color2"> Esto es un titulo de encabezado</h1>
+    </main>
+</body>
+
+</html>
