@@ -5,6 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CLASE 3</title>
     <link rel="stylesheet" href="./style.css" />
+    <style>
+    
+      .box-model-1 {
+        font-size: 30px;
+        padding: 30px;
+        background-color: #b4575789;
+        margin-top: 20px;
+        width: min-content;
+        height: min-content;
+        border-radius: 30%;
+        border: #000 3px solid;
+      }
+
+      .box-model-2 {
+        box-sizing: border-box;
+        width: 100%;
+        background-color: #5f30b789;
+        border: #000 3px solid;
+        margin-top: 20px;
+        padding: 100px;
+      }
+
+      #color-div {
+        background-color: bisque;
+      }
+      
+      div {
+        background-color: #3486d889;
+        margin-top: 20px;
+      }
+
+      #color-id {
+        color: #000;
+      }
+      .color-title {
+        color: pink !important;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -16,10 +54,10 @@
         </ul>
       </nav>
     </header>
-
+    <!--INICIO MAIN -->
     <main>
       <section>
-        <h1>Titulo de la sección</h1>
+        <h1 id="color-id" class="color-title">Titulo de la sección</h1>
         <figure>
           <img
             class="section-img"
@@ -35,7 +73,25 @@
           Vero, provident!
         </p>
       </section>
+
+      <!-- BOX MODEL -->
+      <div class="box-model-1">
+        <span>DIV 1</span>
+        <p>HOLA</p>
+      </div>
+
+      <div class="box-model-2">DIV 2</div>
+      <div id="color-div" class="box-model-2">DIV 2</div>
+      <div class="box-model-2">DIV 2</div>
+
+      <!--SELECT -->
+      <select name="select-form" id="">
+        <option value="1">HOLA</option>
+        <option value="1">HOLA 2</option>
+        <option value="1">HOLA 3</option>
+      </select>
     </main>
+    <!--FINAL MAIN -->
 
     <footer>
       <nav>
