@@ -13,7 +13,7 @@ body {
 .main-nav {
   margin-top: 10px;
   list-style: none; /*Elimina los puntos de la lista*/
-  padding-left: 0px;
+  padding-left: 0x;
 }
 
 .main-nav__item {
@@ -24,8 +24,41 @@ body {
   text-decoration: none;
 }
 
+/*Pseudo elemento = Modifica el emento 
+accedes a el con ::
+*/
 .main-nav__item--separator::after {
   content: "|";
   color: #000000;
   font-size: 35px;
+}
+
+/*Pseudo Clases = Modifica un estado del elemento 
+accedes a el con :
+*/
+
+.main-nav__item--separator:hover {
+  background: rgb(150, 150, 46);
+}
+
+.banner-component {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* centran el contenido*/
+}
+
+.banner-container {
+  background-color: rgb(232, 111, 67);
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.banner-container__text {
+  color: #fff;
+  padding: 5px;
+  text-align: start;
 }
