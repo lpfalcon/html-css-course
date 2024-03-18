@@ -10,10 +10,18 @@ body {
   background-color: #ebebeb;
 }
 
+/* CLASES NAV  */
+
+.nav-container{
+  display: flex;
+  justify-content: center;
+
+}
 .main-nav {
   margin-top: 10px;
   list-style: none; /*Elimina los puntos de la lista*/
-  padding-left: 0x;
+  padding-left: 0px;
+  width: 90%;
 }
 
 .main-nav__item {
@@ -24,7 +32,7 @@ body {
   text-decoration: none;
 }
 
-/*Pseudo elemento = Modifica el emento 
+/*Pseudo elemento = Modifica el elemento 
 accedes a el con ::
 */
 .main-nav__item--separator::after {
@@ -41,6 +49,10 @@ accedes a el con :
   background: rgb(150, 150, 46);
 }
 
+
+/* CLASES MAIN */
+
+
 .banner-component {
   margin-top: 20px;
   display: flex;
@@ -49,7 +61,7 @@ accedes a el con :
 
 .banner-container {
   background-color: rgb(232, 111, 67);
-  padding-top: 3rem;
+  padding-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -60,5 +72,16 @@ accedes a el con :
 .banner-container__text {
   color: #fff;
   padding: 5px;
-  text-align: start;
+}
+
+.banner-container__title {
+  font-size: 3rem;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.banner-container__description
+{
+  max-width:700px;
+  margin-bottom: 10px;
 }
