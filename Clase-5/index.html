@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: content-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background-color: #e4e2e2;
+      }
+
+      .notification__container {
+        max-width: 600px;
+        padding: 40px;
+        margin-top: 15px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1);
+      }
+
+      .notification__container--display {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .notification__title {
+        color: #666;
+        margin-bottom: 30px;
+      }
+
+      .notification__description {
+        color: #888;
+        line-height: 1.5;
+      }
+
+      .notification__column {
+        width: 100%;
+      }
+      
+      .notification__figure{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .notification__image{
+        width: 100px;
+        height: 100px;
+      }
+      
+      @media (min-width: 768px){
+      .notification__column {
+        width: 50%;
+      }
+      
+      }
+    </style>
+    <title>Oferta Buydepa</title>
+  </head>
+  <body>
+    <header>
+      <nav>IMAGE NAV</nav>
+    </header>
+
+    <main>
+      <article class="notification__container notification__container--display">
+        <div class="notification__column">
+          <h1 class="notification__title">
+            Buydepa tiene oferta para ti, Agenda una visita!
+          </h1>
+          <p class="notification__description">
+            Un ejecutivo de Buydepa evaluará tu propiedad para verificar los
+            datos y coordinar la visita
+          </p>
+        </div>
+        <figure class="notification__column notification__figure">
+          <img class="notification__image" src="./images/logo.jpeg" alt="" />
+        </figure>
+      </article>
+
+      <article class="notification__container"></article>
+    </main>
+  </body>
+</html>
