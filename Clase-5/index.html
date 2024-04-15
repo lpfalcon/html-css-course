@@ -16,7 +16,8 @@
       }
 
       .notification__container {
-        max-width: 600px;
+        margin: 0 auto;
+        max-width: 700px;
         padding: 40px;
         margin-top: 15px;
         background-color: #ffffff;
@@ -42,23 +43,46 @@
       .notification__column {
         width: 100%;
       }
-      
-      .notification__figure{
+
+      .notification__figure {
         display: flex;
         align-items: center;
         justify-content: center;
       }
-      
-      .notification__image{
+
+      .notification__image {
         width: 100px;
         height: 100px;
       }
-      
-      @media (min-width: 768px){
-      .notification__column {
-        width: 50%;
+
+      .notification--display-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
-      
+
+      .notification--margin-bottom {
+        margin-bottom: 30px;
+      }
+
+      .notification__button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-bottom: 30px;
+      }
+
+      .notification__button:hover {
+        background-color: #0056b3;
+      }
+      /*MEDIA QUERY*/
+
+      @media (min-width: 768px) {
+        .notification__column {
+          width: 50%;
+        }
       }
     </style>
     <title>Oferta Buydepa</title>
@@ -69,10 +93,11 @@
     </header>
 
     <main>
+      <!-- INICIO ARTICLE -->
       <article class="notification__container notification__container--display">
         <div class="notification__column">
           <h1 class="notification__title">
-            Buydepa tiene oferta para ti, Agenda una visita!
+            Buydepa tiene oferta preparada para ti, Agenda una visita!
           </h1>
           <p class="notification__description">
             Un ejecutivo de Buydepa evaluará tu propiedad para verificar los
@@ -83,8 +108,50 @@
           <img class="notification__image" src="./images/logo.jpeg" alt="" />
         </figure>
       </article>
+      <!-- FIN ARTICLE -->
 
-      <article class="notification__container"></article>
+      <!-- INICIO ARTICLE -->
+      <article class="notification__container notification--display-center">
+        <p class="notification__description notification--margin-bottom">
+          Buydepa revisó los datos de la propiedad que publicaste y quiere
+          hacerte una oferta de compra entre:
+        </p>
+
+        <p class="notification__description notification--margin-bottom">
+          <strong> (UF Desde) </strong>
+
+          <strong> (UF Hasta)</strong>
+        </p>
+
+        <p class="notification__description">
+          La oferta es válida por 10 días. Si te interesa,
+          <b>agenda una visita</b> y podrás concretar tu operación de venta.
+        </p>
+        <a href="#" class="notification__button"> Agendar una visita</a>
+
+        <p>
+          Buy depa es una empresa aliada desarrolladora de soluciones
+          inmobiliarias.
+        </p>
+
+        <p>Si tienes dudas o cunsultas escribenos por:</p>
+
+        <a href="https://web.whatsapp.com/">
+          <img src="./images/whatsAppIcon.jpeg" alt="WhastApp Image" />
+        </a>
+
+        <p>¿Por qué agendar con Buydepa?</p>
+
+        <ul>
+          <li>Buydepa se hace cargo de todo el proceso de escrituración.</li>
+          <li>Recibes el pago al contado</li>
+          <li>Seguridad y confianza en la transacción.</li>
+        </ul>
+      </article>
+
+      <!-- FIN ARTICLE -->
+      
+      
     </main>
   </body>
 </html>
