@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
+      :root {
+        --primary-color: #007bff;
+        --secondary-color: #0056b3;
+        --background-color: #e4e2e2;
+        --title-primary-color: #02000e;
+      }
       * {
         padding: 0;
         margin: 0;
@@ -12,7 +18,7 @@
       }
 
       body {
-        background-color: #e4e2e2;
+        background-color: var(--background-color);
       }
 
       .notification__container {
@@ -31,12 +37,12 @@
       }
 
       .notification__title {
-        color: #666;
+        color: var(--title-primary-color);
         margin-bottom: 30px;
       }
 
       .notification__description {
-        color: #888;
+        color:  var(--title-primary-color);
         line-height: 1.5;
       }
 
@@ -67,7 +73,7 @@
 
       .notification__button {
         padding: 10px 20px;
-        background-color: #007bff;
+        background-color: var(--primary-color);
         color: #ffffff;
         text-decoration: none;
         border-radius: 5px;
@@ -75,7 +81,27 @@
       }
 
       .notification__button:hover {
-        background-color: #0056b3;
+        background-color: var(--secondary-color);
+      }
+
+      .notification__info {
+        color: #888;
+        line-height: 1.5;
+      }
+
+      .notification__icon {
+        width: 50px;
+        height: 50px;
+      }
+
+      .notification__list {
+        list-style: none;
+        text-align:  center;
+      }
+      
+      .notification__list li::before {
+       content: "- ";
+      
       }
       /*MEDIA QUERY*/
 
@@ -83,6 +109,9 @@
         .notification__column {
           width: 50%;
         }
+        .notification__figure{
+          justify-content: end;
+         }
       }
     </style>
     <title>Oferta Buydepa</title>
@@ -129,20 +158,26 @@
         </p>
         <a href="#" class="notification__button"> Agendar una visita</a>
 
-        <p>
+        <p class="notification__info">
           Buy depa es una empresa aliada desarrolladora de soluciones
           inmobiliarias.
         </p>
 
-        <p>Si tienes dudas o cunsultas escribenos por:</p>
+        <p class="notification__info">
+          Si tienes dudas o cunsultas escribenos por:
+        </p>
 
         <a href="https://web.whatsapp.com/">
-          <img src="./images/whatsAppIcon.jpeg" alt="WhastApp Image" />
+          <img
+            class="notification__icon"
+            src="./images/whatsAppIcon.jpeg"
+            alt="WhastApp Image"
+          />
         </a>
 
-        <p>¿Por qué agendar con Buydepa?</p>
+        <p class="notification__info">¿Por qué agendar con Buydepa?</p>
 
-        <ul>
+        <ul class="notification__info notification__list">
           <li>Buydepa se hace cargo de todo el proceso de escrituración.</li>
           <li>Recibes el pago al contado</li>
           <li>Seguridad y confianza en la transacción.</li>
@@ -150,8 +185,6 @@
       </article>
 
       <!-- FIN ARTICLE -->
-      
-      
     </main>
   </body>
 </html>
