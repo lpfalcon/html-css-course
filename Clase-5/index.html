@@ -1,190 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      :root {
-        --primary-color: #007bff;
-        --secondary-color: #0056b3;
-        --background-color: #e4e2e2;
-        --title-primary-color: #02000e;
-      }
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: content-box;
-        font-family: Arial, Helvetica, sans-serif;
-      }
 
-      body {
-        background-color: var(--background-color);
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --primary-color: #007bff;
+      --secondary-color: #0056b3;
+      --background-color: #e4e2e2;
+      --title-primary-color: #02000e;
+    }
 
-      .notification__container {
-        margin: 0 auto;
-        max-width: 700px;
-        padding: 40px;
-        margin-top: 15px;
-        background-color: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1);
-      }
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: content-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-      .notification__container--display {
-        display: flex;
-        flex-wrap: wrap;
-      }
+    body {
+      background-color: var(--background-color);
+    }
 
-      .notification__title {
-        color: var(--title-primary-color);
-        margin-bottom: 30px;
-      }
+    .notification__container {
+      margin: 0 auto;
+      max-width: 700px;
+      padding: 40px;
+      margin-top: 15px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1);
+    }
 
-      .notification__description {
-        color:  var(--title-primary-color);
-        line-height: 1.5;
-      }
+    .notification__container--display {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
+    .notification__title {
+      color: var(--title-primary-color);
+      margin-bottom: 30px;
+    }
+
+    .notification__description {
+      color: var(--title-primary-color);
+      line-height: 1.5;
+    }
+
+    .notification__column {
+      width: 100%;
+    }
+
+    .notification__figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .notification__image {
+      width: 100px;
+      height: 100px;
+    }
+
+    .notification--display-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .notification--margin-bottom {
+      margin-bottom: 30px;
+    }
+
+    .notification__button {
+      padding: 10px 20px;
+      background-color: var(--primary-color);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+
+    .notification__button:hover {
+      background-color: var(--secondary-color);
+    }
+
+    .notification__info {
+      color: #888;
+      line-height: 1.5;
+    }
+
+    .notification__icon {
+      width: 50px;
+      height: 50px;
+    }
+
+    .notification__list {
+      list-style: none;
+      text-align: center;
+    }
+
+    .notification__list li::before {
+      content: "- ";
+    }
+
+    .container {
+      padding: 40px;
+      margin-top: 15px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+    }
+
+    /*MEDIA QUERY*/
+
+    @media (min-width: 768px) {
       .notification__column {
-        width: 100%;
+        width: 50%;
       }
 
       .notification__figure {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        justify-content: end;
       }
+    }
+  </style>
+  <title>Oferta Buydepa</title>
+</head>
 
-      .notification__image {
-        width: 100px;
-        height: 100px;
-      }
+<body>
+  <header>
+    <nav>IMAGE NAV</nav>
+  </header>
 
-      .notification--display-center {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .notification--margin-bottom {
-        margin-bottom: 30px;
-      }
-
-      .notification__button {
-        padding: 10px 20px;
-        background-color: var(--primary-color);
-        color: #ffffff;
-        text-decoration: none;
-        border-radius: 5px;
-        margin-bottom: 30px;
-      }
-
-      .notification__button:hover {
-        background-color: var(--secondary-color);
-      }
-
-      .notification__info {
-        color: #888;
-        line-height: 1.5;
-      }
-
-      .notification__icon {
-        width: 50px;
-        height: 50px;
-      }
-
-      .notification__list {
-        list-style: none;
-        text-align:  center;
-      }
-      
-      .notification__list li::before {
-       content: "- ";
-      
-      }
-      /*MEDIA QUERY*/
-
-      @media (min-width: 768px) {
-        .notification__column {
-          width: 50%;
-        }
-        .notification__figure{
-          justify-content: end;
-         }
-      }
-    </style>
-    <title>Oferta Buydepa</title>
-  </head>
-  <body>
-    <header>
-      <nav>IMAGE NAV</nav>
-    </header>
-
-    <main>
-      <!-- INICIO ARTICLE -->
-      <article class="notification__container notification__container--display">
-        <div class="notification__column">
-          <h1 class="notification__title">
-            Buydepa tiene oferta preparada para ti, Agenda una visita!
-          </h1>
-          <p class="notification__description">
-            Un ejecutivo de Buydepa evaluará tu propiedad para verificar los
-            datos y coordinar la visita
-          </p>
-        </div>
-        <figure class="notification__column notification__figure">
-          <img class="notification__image" src="./images/logo.jpeg" alt="" />
-        </figure>
-      </article>
-      <!-- FIN ARTICLE -->
-
-      <!-- INICIO ARTICLE -->
-      <article class="notification__container notification--display-center">
-        <p class="notification__description notification--margin-bottom">
-          Buydepa revisó los datos de la propiedad que publicaste y quiere
-          hacerte una oferta de compra entre:
-        </p>
-
-        <p class="notification__description notification--margin-bottom">
-          <strong> (UF Desde) </strong>
-
-          <strong> (UF Hasta)</strong>
-        </p>
-
+  <main>
+    <!-- INICIO ARTICLE -->
+    <article class="notification__container notification__container--display">
+      <div class="notification__column">
+        <h1 class="notification__title">
+          Buydepa tiene oferta preparada para ti, Agenda una visita!
+        </h1>
         <p class="notification__description">
-          La oferta es válida por 10 días. Si te interesa,
-          <b>agenda una visita</b> y podrás concretar tu operación de venta.
+          Un ejecutivo de Buydepa evaluará tu propiedad para verificar los
+          datos y coordinar la visita
         </p>
-        <a href="#" class="notification__button"> Agendar una visita</a>
+      </div>
+      <figure class="notification__column notification__figure">
+        <img class="notification__image" src="./images/logo.jpeg" alt="" />
+      </figure>
+    </article>
+    <!-- FIN ARTICLE -->
 
-        <p class="notification__info">
-          Buy depa es una empresa aliada desarrolladora de soluciones
-          inmobiliarias.
-        </p>
+    <!-- INICIO ARTICLE -->
+    <article class="notification__container notification--display-center">
+      <p class="notification__description notification--margin-bottom">
+        Buydepa revisó los datos de la propiedad que publicaste y quiere
+        hacerte una oferta de compra entre:
+      </p>
 
-        <p class="notification__info">
-          Si tienes dudas o cunsultas escribenos por:
-        </p>
+      <p class="notification__description notification--margin-bottom">
+        <strong> (UF Desde) </strong>
 
-        <a href="https://web.whatsapp.com/">
-          <img
-            class="notification__icon"
-            src="./images/whatsAppIcon.jpeg"
-            alt="WhastApp Image"
-          />
-        </a>
+        <strong> (UF Hasta)</strong>
+      </p>
 
-        <p class="notification__info">¿Por qué agendar con Buydepa?</p>
+      <p class="notification__description">
+        La oferta es válida por 10 días. Si te interesa,
+        <b>agenda una visita</b> y podrás concretar tu operación de venta.
+      </p>
+      <a href="#" class="notification__button"> Agendar una visita</a>
 
-        <ul class="notification__info notification__list">
-          <li>Buydepa se hace cargo de todo el proceso de escrituración.</li>
-          <li>Recibes el pago al contado</li>
-          <li>Seguridad y confianza en la transacción.</li>
-        </ul>
-      </article>
+      <p class="notification__info">
+        Buy depa es una empresa aliada desarrolladora de soluciones
+        inmobiliarias.
+      </p>
 
-      <!-- FIN ARTICLE -->
-    </main>
-  </body>
+      <p class="notification__info">
+        Si tienes dudas o cunsultas escribenos por:
+      </p>
+
+      <a href="https://web.whatsapp.com/">
+        <img class="notification__icon" src="./images/whatsAppIcon.jpeg" alt="WhastApp Image" />
+      </a>
+
+      <p class="notification__info">¿Por qué agendar con Buydepa?</p>
+
+      <ul class="notification__info notification__list">
+        <li>Buydepa se hace cargo de todo el proceso de escrituración.</li>
+        <li>Recibes el pago al contado</li>
+        <li>Seguridad y confianza en la transacción.</li>
+      </ul>
+    </article>
+
+    <!-- FIN ARTICLE -->
+
+    <!-- INICIO DE SECTION-->
+    <div class="container">
+      <h3>Taller Online</h3>
+      <img class="avatar" src="./images/avatar.jpeg" alt="Avatar">
+      <p>María Constanza Freire</p>
+      <p>Abogada inmobiliaria</p>
+
+      <div>
+        <div>
+          <img src="./images/calendar.jpeg" alt="Calendar">
+
+          <p> <b>Fecha: </b> martes 19 de marzo de 2024</p>
+          <b>Horario: </b> 00:00 HRS
+        </div>
+
+        <div>
+          <img src="./images/player.jpeg" alt="Youtube">
+          <p><b>Transmision: </b> canal de Youtube portalInmobiliario </p>
+        </div>
+      </div>
+      <a href="#"> Haga Click Aqui </a>
+
+    </div>
+  </main>
+</body>
+
 </html>
